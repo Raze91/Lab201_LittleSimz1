@@ -14,9 +14,9 @@
 <body class="" cz-shortcut-listen="true">
 
     <header>
-            <div class="alert alert-success navbar navbar-expand-lg d-none" role="alert" id="alert">
-                Vous êtes bien connecté !
-            </div>
+        <div class="alert alert-success navbar navbar-expand-lg d-none" role="alert" id="alert">
+            Vous êtes bien connecté !
+        </div>
     </header>
 
     <main>
@@ -34,19 +34,19 @@
 
         </form>
         <div class="d-none dates" id="connected">
-            <form class="form-signin">
+            <form class="form-signin" id="create">
 
                 <label for="date">Date du Concert</label>
-                <input type="text" class="form-control" placeholder="Date du concert" required autofocus>
+                <input type="text" class="form-control" placeholder="Date du concert" id="date" required autofocus>
 
                 <label for="city_name">Nom de la ville</label>
-                <input type="text" class="form-control" placeholder="Nom de la ville" required>
+                <input type="text" class="form-control" placeholder="Nom de la ville" id="city_name" required>
 
                 <label for="country">Pays</label>
-                <input type="text" class="form-control" placeholder="Pays" required>
+                <input type="text" class="form-control" placeholder="Pays" id="country" required>
 
                 <label for="party_name">Lieu / Nom du festival</label>
-                <input type="text" class="form-control" placeholder="Lieu / Nom du festival" required>
+                <input type="text" class="form-control" placeholder="Lieu / Nom du festival" id="party_name" required>
 
                 <legend>Complet ?</legend>
 
@@ -56,9 +56,11 @@
                 <input type="radio" name="soldOut" value=false id="SoldOut2">
                 <label for="SoldOut2">Non</label>
 
-                <button class="btn btn-lg btn-primary btn-block">Créer</button>
+                <button class="btn btn-lg btn-primary btn-block" id="create">Créer</button>
             </form>
         </div>
+
+        <div id="displayTours"></div>
     </main>
 
     <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>

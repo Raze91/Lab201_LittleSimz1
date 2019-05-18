@@ -11,20 +11,54 @@ const config = {
 firebase.initializeApp(config);
 
 $('#login').on('submit', onSubmitLogin);
+$('#create').on('submit', CreateDate);
 
 const db = firebase.firestore();
 
-db.collection("users").add({
-  first: "Ada",
-  last: 'Smith',
-  born: 1999
-})
-.then(function (docRef) {
-  console.log("Document written with ID :", docRef.id);
-})
-.catch(function (error) {
-  console.error("Error adding document :", error);
-})
+function CreateDate() {
+  event.preventDefault();
+
+  let radio;
+
+  if (document.getElementById('SoldOut1').checked) {
+    radio = 'Oui';
+  } else {
+    radio = 'Non';
+  }
+
+  db.collection("tour").add({
+    date: $('#date').val(),
+    city_name: $('#city_name').val(),
+    country: $('#country').val(),
+    party_name: $('#party_name').val(),
+    complete: radio
+  })
+    .then(function (docRef) {
+      console.log("Document written with ID :", docRef.id);
+    })
+    .catch(function (error) {
+      console.error("Error adding document :", error);
+    });
+
+  displayTour();
+}
+
+function displayTour() {
+  db.collection("tour").get().then((querySnapshot) => {
+    let html_tours = '';
+    querySnapshot.forEach(function (doc) {
+      const {date, city_name, country, party_name, complete} = doc.data();
+
+      html_tours += `<h1>Liste des dates des concerts<h1/>
+      <div class="content"><strong>Date du concert :</strong> ${date} <br>
+      <strong>Ville :</strong> ${city_name} <br>
+      <strong>Pays :</strong> ${country} <br>
+      <strong>Lieu :</strong> ${party_name} <br>
+      <strong>Complet ? :</strong> ${complete}</div>`;
+    });
+    $('#displayTours').html(html_tours);
+  });
+}
 
 function onSubmitLogin(event) {
   event.preventDefault();
@@ -32,25 +66,24 @@ function onSubmitLogin(event) {
   const email = $('#login_email').val();
   const password = $('#login_password').val();
 
-  firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-      // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      // ...
-    });
-    firebase.auth().signInWithEmailAndPassword(email, password).then(function(result) {
-      // Handle Errors here.
-      const user = result.user;
-      console.log(user.email);
-      const wrapper = document.getElementById('login');
-      wrapper.classList.add('d-none');
+  firebase.auth().signInWithEmailAndPassword(email, password).catch(function (error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // ...
+  });
+  firebase.auth().signInWithEmailAndPassword(email, password).then(function (result) {
+    // Handle Errors here.
 
-      const wrapper2 = document.getElementById('connected');
-      wrapper2.classList.remove('d-none');
+    const wrapper = document.getElementById('login');
+    wrapper.classList.add('d-none');
 
-      const alert = document.getElementById('alert');
-      alert.classList.remove('d-none');
+    const wrapper2 = document.getElementById('connected');
+    wrapper2.classList.remove('d-none');
 
-      // ...
-    });
+    const alert = document.getElementById('alert');
+    alert.classList.remove('d-none');
+
+    displayTour();
+  });
 }
