@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Page d'administration</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body class="text-center" cz-shortcut-listen="true">
+
+    <form class="form-signin" id="login">
+
+        <h1 class="h3 mb-3 font-weight-normal">Please Sign In</h1>
+
+        <label for="login_email" class="sr-only">Email Address</label>
+        <input type="email" id="login_email" class="form-control" placeholder="Email Address" required autofocus>
+
+        <label for="login_password" class="sr-only">Password</label>
+        <input type="password" id="login_password" class="form-control" placeholder="Password" required>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+
+    </form>
+    <div class="d-none" id="connected">
+        <h1 class="h3">Bienvenue</h1>
+    </div>
+    
+    <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
+    <script src="https://unpkg.com/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-firestore.js"></script>
+
+    <script src="scripts/admin.js"></script>
+</body>
+
+</html>
