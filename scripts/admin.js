@@ -35,6 +35,9 @@ function onSubmitLogin(event) {
       const wrapper2 = document.getElementById('connected');
       wrapper2.classList.remove('d-none');
 
+      const alert = document.getElementById('alert');
+      alert.classList.remove('d-none');
+
       // ...
     });
 }
