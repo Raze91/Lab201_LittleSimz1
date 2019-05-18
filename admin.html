@@ -8,31 +8,62 @@
     <title>Page d'administration</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="css/admin.css">
 </head>
 
-<body class="text-center" cz-shortcut-listen="true">
+<body class="" cz-shortcut-listen="true">
 
-    <form class="form-signin" id="login">
+    <header>
+            <div class="alert alert-success navbar navbar-expand-lg d-none" role="alert" id="alert">
+                Vous êtes bien connecté !
+            </div>
+    </header>
 
-        <h1 class="h3 mb-3 font-weight-normal">Please Sign In</h1>
+    <main>
+        <form class="form-signin" id="login">
 
-        <label for="login_email" class="sr-only">Email Address</label>
-        <input type="email" id="login_email" class="form-control" placeholder="Email Address" required autofocus>
+            <h1 class="h3 mb-3 font-weight-normal">Please Sign In</h1>
 
-        <label for="login_password" class="sr-only">Password</label>
-        <input type="password" id="login_password" class="form-control" placeholder="Password" required>
+            <label for="login_email" class="sr-only">Email Address</label>
+            <input type="email" id="login_email" class="form-control" placeholder="Email Address" required autofocus>
 
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            <label for="login_password" class="sr-only">Password</label>
+            <input type="password" id="login_password" class="form-control" placeholder="Password" required>
 
-    </form>
-    <div class="d-none" id="connected">
-        <h1 class="h3">Bienvenue</h1>
-    </div>
-    
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+
+        </form>
+        <div class="d-none dates" id="connected">
+            <form class="form-signin">
+
+                <label for="date">Date du Concert</label>
+                <input type="text" class="form-control" placeholder="Date du concert" required autofocus>
+
+                <label for="city_name">Nom de la ville</label>
+                <input type="text" class="form-control" placeholder="Nom de la ville" required>
+
+                <label for="country">Pays</label>
+                <input type="text" class="form-control" placeholder="Pays" required>
+
+                <label for="party_name">Lieu / Nom du festival</label>
+                <input type="text" class="form-control" placeholder="Lieu / Nom du festival" required>
+
+                <legend>Complet ?</legend>
+
+                <input type="radio" name="soldOut" value=true id="SoldOut1">
+                <label for="SoldOut1">Oui</label>
+
+                <input type="radio" name="soldOut" value=false id="SoldOut2">
+                <label for="SoldOut2">Non</label>
+
+                <button class="btn btn-lg btn-primary btn-block">Créer</button>
+            </form>
+        </div>
+    </main>
+
     <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
     <script src="https://unpkg.com/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
-    
+
     <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-firestore.js"></script>

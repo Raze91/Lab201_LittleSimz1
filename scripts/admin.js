@@ -12,6 +12,19 @@ firebase.initializeApp(config);
 
 $('#login').on('submit', onSubmitLogin);
 
+const db = firebase.firestore();
+
+db.collection("users").add({
+  first: "Ada",
+  last: 'Smith',
+  born: 1999
+})
+.then(function (docRef) {
+  console.log("Document written with ID :", docRef.id);
+})
+.catch(function (error) {
+  console.error("Error adding document :", error);
+})
 
 function onSubmitLogin(event) {
   event.preventDefault();
@@ -34,6 +47,9 @@ function onSubmitLogin(event) {
 
       const wrapper2 = document.getElementById('connected');
       wrapper2.classList.remove('d-none');
+
+      const alert = document.getElementById('alert');
+      alert.classList.remove('d-none');
 
       // ...
     });
