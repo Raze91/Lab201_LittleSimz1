@@ -49,12 +49,13 @@ function displayTour() {
     querySnapshot.forEach(function (doc) {
       const {date, city_name, country, party_name, complete} = doc.data();
 
-      html_tours += `<h1>Liste des dates des concerts<h1/>
+      html_tours += `
       <div class="content"><strong>Date du concert :</strong> ${date} <br>
       <strong>Ville :</strong> ${city_name} <br>
       <strong>Pays :</strong> ${country} <br>
       <strong>Lieu :</strong> ${party_name} <br>
-      <strong>Complet ? :</strong> ${complete}</div>`;
+      <strong>Complet ? :</strong> ${complete}</div>
+      <br>`;
     });
     $('#displayTours').html(html_tours);
   });
@@ -84,6 +85,8 @@ function onSubmitLogin(event) {
     const alert = document.getElementById('alert');
     alert.classList.remove('d-none');
 
+    const contentTitle = document.getElementById('title_content');
+    contentTitle.classList.remove('d-none');
     displayTour();
   });
 }
