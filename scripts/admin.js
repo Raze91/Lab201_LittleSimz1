@@ -44,7 +44,7 @@ function CreateDate() {
 }
 
 function displayTour() {
-  db.collection("tour").get().then((querySnapshot) => {
+  db.collection("tour").orderBy("date", "asc").get().then((querySnapshot) => {
     let html_tours = '';
     querySnapshot.forEach(function (doc) {
       const {date, city_name, country, party_name, complete} = doc.data();
@@ -54,11 +54,26 @@ function displayTour() {
       <strong>Ville :</strong> ${city_name} <br>
       <strong>Pays :</strong> ${country} <br>
       <strong>Lieu :</strong> ${party_name} <br>
-      <strong>Complet ? :</strong> ${complete}</div>
+      <strong>Complet ? :</strong> ${complete} <br>
+      <button onclick="deleteData(this.id)" class="btn btn-sm btn-primary btn-block" id="${doc.id}">Supprimer</button>
+      </div>
       <br>`;
     });
+
     $('#displayTours').html(html_tours);
+    
   });
+}
+
+function deleteData(id) {
+  db.collection("tour").doc(id).delete()
+  
+  .then(function() {
+    console.log("Document successfully deleted!");
+}).catch(function(error) {
+    console.error("Error removing document: ", error);
+});
+displayTour();
 }
 
 function onSubmitLogin(event) {
@@ -87,6 +102,7 @@ function onSubmitLogin(event) {
 
     const contentTitle = document.getElementById('title_content');
     contentTitle.classList.remove('d-none');
+
     displayTour();
   });
 }
