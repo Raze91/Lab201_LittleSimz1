@@ -45,21 +45,25 @@
                 <label for="country">Pays</label>
                 <input type="text" class="form-control" placeholder="Pays" id="country" required>
 
-                <label for="party_name">Lieu / Nom du festival</label>
-                <input type="text" class="form-control" placeholder="Lieu / Nom du festival" id="party_name" required>
+                <label for="party_place">Lieu</label>
+                <input type="text" class="form-control" placeholder="Lieu" id="party_place" required>
+
+                <label for="party_name">Nom du festival</label>
+                <input type="text" class="form-control" placeholder="Nom du festival" id="party_name" required>
 
                 <legend>Complet ?</legend>
 
-                <input type="radio" name="soldOut" value=true id="SoldOut1">
+                <input type="radio" name="soldOut" value=true id="SoldOut1" required>
                 <label for="SoldOut1">Oui</label>
 
-                <input type="radio" name="soldOut" value=false id="SoldOut2">
+                <input type="radio" name="soldOut" value=false id="SoldOut2" required>
                 <label for="SoldOut2">Non</label>
 
                 <button class="btn btn-lg btn-primary btn-block">Créer</button>
             </form>
         </div>
         <h1 class="content-title d-none" id="title_content">Liste des dates de concert</h1>
+        <br>
         <div id="displayTours"></div>
     </main>
 

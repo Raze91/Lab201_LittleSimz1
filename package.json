@@ -4,7 +4,7 @@
   "description": "",
   "main": "admin.js",
   "scripts": {
-    "start": "live-server --port-1337 --browser-chrome"
+    "start": "live-server --port=1337 --browser=chrome"
   },
   "repository": {
     "type": "git",
