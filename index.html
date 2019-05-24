@@ -6,19 +6,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Page d'accueil</title>
+    <link rel="stylesheet" href="css/template.css">
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header></header>
-    <main>
 
-        <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
-        <script src="https://unpkg.com/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+    <div id="fullpage">
 
-        <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-firestore.js"></script>
-    </main>
+        <section id="page1">
+            <p>HOME</p>
+        </section>
+
+        <section id="page2">
+            <p id="little_simz">LITTLE SIMZ</p>
+            <div id="bio">
+                <div id="bio-text">
+                    <h1>Little Simz</h1> <br><br>
+                    <p>Simbi Ajikawo, plus connue sous le nom de Little Simz, est une rappeuse, musicienne et actrice
+                        anglaise née le 23 février 1994 dans le borough londonien d'Islington. Elle est élevée par sa
+                        mère d'origine nigeriane à Islington dans le nord de Londres. Elle a étudiée à la Highbury
+                        Fields School de Londres puis à Westminster Kingsway College, où elle a poursuivie sa carrière
+                        dans la musique.</p>
+                    <br> <br>
+                    <p>La jeune fille est consciente de sa différence dès son enfance et commence à rapper et à écrire
+                        ses premiers textes à l'âge de 9 ans. Influencée tout d'abord par Missy Elliott, puis par Lauryn
+                        Hill, 2Pac, Nas et Jay-Z2. A 9 ans, Simbi avait déjà une manière très personnelle de réfléchir
+                        et d'envisager son futur, ce qu'elle considère comme le réel point de départ de sa vie.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="page3">
+            <p>MUSIC</p>
+        </section>
+
+        <section id="page4">
+            <p>TOUR</p>
+        </section>
+
+        <section id="page5">
+            <p>PHOTOS</p>
+        </section>
+
+        <section id="page6">
+            <p>VIDÉOS</p>
+        </section>
+    </div>
+
+    <nav class="menu">
+        <h1>LITTLE SIMZ</h1>
+        <div class="tmp">
+            <a href="">HOME</a>
+            <a href="">LITTLE SIMZ</a>
+            <a href="">MUSIC</a>
+            <a href="">TOUR</a>
+            <a href="">PHOTOS</a>
+            <a href="">VIDEOS</a>
+        </div>
+    </nav>
+    <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src='Lib/jquery.fullpage.min.js'></script>
+    <script>
+        $('#fullpage').fullpage();
+    </script>
 </body>
 
 </html>
