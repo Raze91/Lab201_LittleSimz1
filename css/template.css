@@ -65,6 +65,8 @@ table {
 
 
 .menu {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	/* flex-direction: column; */
 	color: white;
@@ -121,9 +123,16 @@ table {
 	background-position-y: 39%;
 	background-size: cover;
 	color: white;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
-	flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 }
 
 #page1 p {
@@ -168,7 +177,8 @@ table {
 	color: white;
 	font-size: 7rem;
 	letter-spacing: 3rem;
-	transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	        transform: rotate(-90deg);
 	position: absolute;
 	top: 17rem;
 	left: -9rem; 
@@ -203,7 +213,8 @@ table {
 #little_simz {
 	color: white;
 	opacity: 0.35;
-	transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	        transform: rotate(-90deg);
 	position: absolute;
 	top: 21rem;
 	font-size: 7rem;
@@ -212,17 +223,28 @@ table {
 }
 
 #bio {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: flex-end;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
 }
 
 #bio-text {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	width: 49.4vw;
 	height: 100vh;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	text-align: center;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	color: white;
 	font-size: 1.5rem;
 	height: 65vh;
@@ -260,10 +282,19 @@ table {
 }
 
 .audio-player {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: row-reverse;
-	justify-content: flex-end;
-	align-items: center;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: reverse;
+	    -ms-flex-direction: row-reverse;
+	        flex-direction: row-reverse;
+	-webkit-box-pack: end;
+	    -ms-flex-pack: end;
+	        justify-content: flex-end;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 
@@ -360,7 +391,8 @@ progress {
 #music {
 	color: white;
 	opacity: .35;
-	transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	        transform: rotate(-90deg);
 	position: absolute;
 	top: 49vh;
 	font-size: 7rem;
@@ -389,20 +421,29 @@ progress {
 }
 
 #bio-2 {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
 #bio-album {
 	color: white;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	font-size: 1.5rem;
 	height: 100vh;
 	overflow: hidden;
 	margin-top: 10.5rem;
 	margin-left: 11.5rem;
 	text-align: justify;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	width: 39vw;
 	letter-spacing: 0.2rem;
 }
@@ -482,7 +523,8 @@ progress {
 #Tour {
 	color: white;
 	opacity: .35;
-	transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	        transform: rotate(-90deg);
 	position: absolute;
 	top: 17rem;
 	font-size: 7rem;
@@ -492,11 +534,15 @@ progress {
 }
 
 #tour-ctnr {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	margin-left: 9rem;
 }
 
 #tour-ctnr-2 {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	overflow: auto;
 	margin-top: 11rem;
@@ -504,10 +550,15 @@ progress {
 }
 
 #tour {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	width: 40vw;
 	height: 100vh;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	color: white;
 	height: 65vh;
 	font-family: 'AbolitionW00-Soft', sans-serif;
@@ -521,10 +572,15 @@ progress {
 	padding-bottom: 0.225rem;
 }
 #tour-middle {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	width: 100vw;
 	height: 100vh;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	color: white;
 	height: 65vh;
 	font-family: 'AbolitionW00-Soft', sans-serif;
@@ -543,10 +599,15 @@ progress {
 }
 
 #tour-right {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	width: 150vw;
 	height: 100vh;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	color: white;
 	height: 65vh;
 	font-family: 'AbolitionW00-Soft', sans-serif;
@@ -595,7 +656,8 @@ progress {
 #photo {
 	color: white;
 	opacity: .35;
-	transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	        transform: rotate(-90deg);
 	position: absolute;
 	top: 16rem;
 	font-size: 7rem;
@@ -605,9 +667,14 @@ progress {
 }
 
 .img-global-ctnr {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
 }
 
 .img-ctnr {
@@ -658,7 +725,8 @@ progress {
 #videos{
 	color: white;
 	opacity: .35;
-	transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	        transform: rotate(-90deg);
 	position: absolute;
 	top: 17rem;
 	font-size: 7rem;
@@ -681,8 +749,6 @@ progress {
 	background-position-x: 0px;
 	background-repeat: no-repeat;
 	overflow:hidden;
-	-webkit-border-radius:50px;
-	-moz-border-radius:50px;
 	border-radius:250px;
 	width:400px;
 	height:400px;
@@ -690,9 +756,15 @@ progress {
 	top: 34vh;
 	left: 38vw;
 	border: 10px solid black;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	align-items: flex-end;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: end;
+	    -ms-flex-align: end;
+	        align-items: flex-end;
 }
 
 .rounded-image a {
@@ -708,8 +780,6 @@ progress {
 	background-position-x: -10px;
 	background-repeat: no-repeat;
 	overflow:hidden;
-	-webkit-border-radius:50px;
-	-moz-border-radius:50px;
 	border-radius:250px;
 	width:100px;
 	height:100px;
@@ -725,8 +795,6 @@ progress {
 	background-position-x: -10px;
 	background-repeat: no-repeat;
 	overflow:hidden;
-	-webkit-border-radius:50px;
-	-moz-border-radius:50px;
 	border-radius:250px;
 	width:100px;
 	height:100px;
@@ -743,8 +811,6 @@ progress {
 	background-position-x: -7px;
 	background-repeat: no-repeat;
 	overflow:hidden;
-	-webkit-border-radius:50px;
-	-moz-border-radius:50px;
 	border-radius:250px;
 	width:100px;
 	height:100px;
@@ -761,8 +827,6 @@ progress {
 	background-position-x: -10px;
 	background-repeat: no-repeat;
 	overflow:hidden;
-	-webkit-border-radius:50px;
-	-moz-border-radius:50px;
 	border-radius:250px;
 	width:100px;
 	height:100px;
@@ -779,8 +843,6 @@ progress {
 	background-position-x: -10px;
 	background-repeat: no-repeat;
 	overflow:hidden;
-	-webkit-border-radius:50px;
-	-moz-border-radius:50px;
 	border-radius:250px;
 	width:100px;
 	height:100px;
@@ -797,8 +859,6 @@ progress {
 	background-position-x: 0px;
 	background-repeat: no-repeat;
 	overflow:hidden;
-	-webkit-border-radius:50px;
-	-moz-border-radius:50px;
 	border-radius:250px;
 	width:100px;
 	height:100px;
@@ -815,8 +875,6 @@ progress {
 	background-position-x: -40px;
 	background-repeat: no-repeat;
 	overflow:hidden;
-	-webkit-border-radius:50px;
-	-moz-border-radius:50px;
 	border-radius:250px;
 	width:100px;
 	height:100px;
@@ -833,8 +891,6 @@ progress {
 	background-position-x: -7px;
 	background-repeat: no-repeat;
 	overflow:hidden;
-	-webkit-border-radius:50px;
-	-moz-border-radius:50px;
 	border-radius:250px;
 	width:100px;
 	height:100px;
@@ -851,8 +907,6 @@ progress {
 	background-position-x: 0px;
 	background-repeat: no-repeat;
 	overflow:hidden;
-	-webkit-border-radius:50px;
-	-moz-border-radius:50px;
 	border-radius:250px;
 	width:100px;
 	height:100px;
@@ -869,8 +923,6 @@ progress {
 	background-position-x: -7px;
 	background-repeat: no-repeat;
 	overflow:hidden;
-	-webkit-border-radius:50px;
-	-moz-border-radius:50px;
 	border-radius:250px;
 	width:100px;
 	height:100px;
