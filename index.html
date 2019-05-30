@@ -6,27 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Page d'accueil</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="css/template.css">
     <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/full-page-scroll.css">
+    <script src="Lib/full-page-scroll.js"></script>
 </head>
 
 <body>
 
-    <div id="fullpage">
+    <div id="main" class="scroll-container">
 
         <section id="page1">
             <span id="home">HOME</span>
 
-            <p>NOUVEL ALBUM</p>
+            <p id="new_album">NOUVEL ALBUM</p>
 
             <h1>GREY AREA</h1>
 
             <p>1 MARS 2019</p>
 
-            <input type="button" class="button" value="PRECOMMANDER">
+            <a target="_blank"
+                href="https://www.fnac.com/SearchResult/ResultList.aspx?SCat=0!1&Search=little%20simz%20grey%20area&sft=1&sa=0&fbclid=IwAR1-KV3yLeQvRpOdc4nliDnbpdUkCFlxj4XZ2_jWbns5Gmo-6R-5ZDfQifM#ID10896339"><input
+                    type="button" class="button" value="PRÉCOMMANDER"></a>
         </section>
 
         <section id="page2">
+            <div id="img2"></div>
             <p id="little_simz">LITTLE SIMZ</p>
             <div id="bio">
                 <div id="bio-text">
@@ -39,47 +46,251 @@
                     <br> <br>
                     <p>La jeune fille est consciente de sa différence dès son enfance et commence à rapper et à écrire
                         ses premiers textes à l'âge de 9 ans. Influencée tout d'abord par Missy Elliott, puis par Lauryn
-                        Hill, 2Pac, Nas et Jay-Z2. A 9 ans, Simbi avait déjà une manière très personnelle de réfléchir
+                        Hill, 2Pac, Nas et Jay-Z. A 9 ans, Simbi avait déjà une manière très personnelle de réfléchir
                         et d'envisager son futur, ce qu'elle considère comme le réel point de départ de sa vie.</p>
                     <br><br>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est commodi odit porro dignissimos ex eos quos quisquam voluptates, iste doloribus repellat adipisci magnam tenetur sapiente cumque aperiam a quod sunt?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas, fugit ea quam at alias quisquam quod harum saepe labore aliquam vitae eum magnam pariatur fuga aut tenetur in repellendus blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ut quos deleniti officiis nihil, mollitia magni? Necessitatibus laboriosam quia nulla alias! Quam modi amet facere, enim repellat ut minima debitis.</p>
+                    <p>Le titre de la première chanson qu'elle écrit est : "Achieve, Achieve, Achieve"
+                        soulignant de sa positivité et de ses ambitions.</p>
+                    <br><br>
+                    <p>Elle se fait connaître progressivement dans le milieu du hip-hop en sortant pas moins de douze
+                        projets entre 2010 et 2015. Elle décrit sa musique comme du rap expérimental. </p>
+                    <br>
+                    <p>Kendrick Lamar l'a décrite comme l'une des meilleures rappeuses contemporaines. </p>
                 </div>
             </div>
         </section>
 
-        <section id="page3">
-            <p>MUSIC</p>
+        <section id="tracklist-containers">
+            <p id="music">MUSIC</p>
+            <div id="bio-2">
+                <div id="bio-album">
+                    <h1>GREY AREA</h1>
+                    <p class="paragraphe1">Grey Area est le troisième album studio de la rappeuse britannique Little
+                        Simz, qui sortira le
+                        1er mars 2019. ce troisième album est une oeuvre significative pour la jeune artiste de 25 ans
+                        qui confirme sa place dans le paysage underground hip-hop londonien.</p>
+
+                    <p>À travers Grey Area, Little Simz fait ressentir son évolution personnelle et artistique en
+                        passant métaphoriquement par dix nuances de gris. Les chansons de l'album racontent les
+                        différents états d'âme de l'artiste et son point
+                        de vue sur monde de la musique.</p>
+
+                    <a target='_blank'
+                        href="https://www.fnac.com/SearchResult/ResultList.aspx?SCat=0!1&Search=little%20simz%20grey%20area&sft=1&sa=0&fbclid=IwAR1kRRncMf-vZ6Wv1r44D16xgPK9e3_LtEg-KK3s1B99-FKQRQ-h8LtTyTE#ID10896339"><input
+                            type="button" class="button2" value="PRÉCOMMANDER"></a>
+                </div>
+                <div id="tracklist">
+                    <h1>TRACKLIST</h1>
+
+                </div>
+                <div id="other-albums">
+                    <p>Écouter les autres albums</p>
+                    <div id="spotify">
+                        <a target="_blank" href="https://open.spotify.com/artist/6eXZu6O7nAUA5z6vLV8NKI"><img
+                                src="/assets/pictos/spotify.png" alt=""
+                                onmouseover="this.src='assets/pictos/spotify_hover.png'"
+                                onmouseout="this.src='assets/pictos/spotify.png'"></a></div>
+                </div>
+            </div>
         </section>
 
         <section id="page4">
-            <p>TOUR</p>
+            <p id="Tour">TOUR</p>
+            <div id="tour-ctnr">
+                <div id="tour-ctnr-2">
+                    <div id="tour">
+
+                    </div>
+                    <div id="tour-middle">
+
+                    </div>
+                    <div id="tour-right">
+
+                    </div>
+                </div>
+                <a target="_blank"
+                    href="https://www.bandsintown.com/a/6864041?came_from=242&fbclid=IwAR2tYfa6HXzNaKBQUGWyZ2IlD9fal5Ec4CBjlkp29cnfORUfBdTKIOhhKgE">
+                    <button>Réserver</button></a>
+            </div>
         </section>
 
         <section id="page5">
-            <p>PHOTOS</p>
+            <p id="photo">PHOTOS</p>
+            <div class="img-global-ctnr">
+                <div class="img-ctnr"><img src="assets/img/little_simz_1.jpg" alt="">
+                </div>
+                <div class="img-ctnr"><img src="assets/img/little_simz_2.jpg" alt=""></div>
+                <div class="img-ctnr"><img src="assets/img/little_simz_3.jpg" alt=""></div>
+                <div class="img-ctnr"><img src="assets/img/Little_Simz_4.jpg" alt=""></div>
+                <div class="img-ctnr"><img src="assets/img/little_simz_5.jpg" alt=""></div>
+                <div class="img-ctnr"><img src="assets/img/little_simz_6.jpg" alt=""></div>
+                <div class="img-ctnr"><img src="assets/img/little_simz_7.jpg" alt=""></div>
+                <div class="img-ctnr"><img src="assets/img/little_simz_8.jpg" alt=""></div>
+                <div class="img-ctnr"><img src="assets/img/little_simz_9.jpg" alt=""></div>
+                <div class="img-ctnr"><img src="assets/img/little_simz_10.jpg" alt=""></div>
+                <div id="global-overlay"></div>
+            </div>
         </section>
 
         <section id="page6">
-            <p>VIDÉOS</p>
+            <p id="videos">VIDÉOS</p>
+            <div class="rounded-image">
+                <a target="_blank" href="https://www.youtube.com/channel/UC89IYKXyf15qNezA7IuFG1A"><img
+                        src="assets/pictos/youtube2.png" alt=""
+                        onmouseover="this.src='assets/pictos/youtube2_hover.png'"
+                        onmouseout="this.src='assets/pictos/youtube2.png'"></a>
+            </div>
+            <div class="rounded-image-2" onclick="offense()"></div> <!-- Offense-->
+            <div class="rounded-image-3" onclick="boss()"></div> <!-- Boss-->
+            <div class="rounded-image-4" onclick="selfish()"></div> <!-- Selfish-->
+            <div class="rounded-image-5" onclick="backseat()"></div> <!-- Backseat-->
+            <div class="rounded-image-6" onclick="gratitude()"></div> <!-- Gratitude-->
+            <div class="rounded-image-7" onclick="sonar()"></div> <!-- Sonar-->
+            <div class="rounded-image-8" onclick="great()"></div> <!-- Great Espace Festival-->
+            <div class="rounded-image-9" onclick="coachella()"></div> <!-- Coachella 2019-->
+            <div class="rounded-image-10" onclick="demon()"></div> <!-- Demon Dayz Festival -->
+            <div class="rounded-image-11" onclick="listen()"></div> <!-- Listen Out Melbourne-->
+            <p id="clips">Clips</p>
+            <p class="selfish">Selfish</p>
+            <p class="boss">Boss</p>
+            <p class="offense">Offence</p>
+            <p class="backseat">Backseat</p>
+            <p class="gratitude">Gratitude</p>
+            <p id="concerts">Concerts</p>
+            <p class="coachella">Coachella 2019</p>
+            <p class="great">Great Espace Festival</p>
+            <p class="sonar">Sonar</p>
+            <p class="demon">Demon Dayz Festival</p>
+            <p class="listen">Listen Out Melbourne</p>
+
+            <!-- Offense -->
+            <div id="offenseOverlay" class="d-none">
+                <iframe width="760" height="415" src="https://www.youtube.com/embed/iOjyGr01VZ4" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                    class="video">
+                </iframe>
+                <div id="overlayOffense" class="d-none" onclick="hideOffense()"></div>
+            </div>
+
+            <!-- Boss -->
+            <div id="bossOverlay" class="d-none">
+                <iframe width="760" height="415" src="https://www.youtube.com/embed/nobyMYOD5Bg" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                    class="video">
+                </iframe>
+                <div id="overlayBoss" class="d-none" onclick="hideBoss()"></div>
+            </div>
+
+            <!-- Selfish -->
+            <div id="selfishOverlay" class="d-none">
+                <iframe width="760" height="415" src="https://www.youtube.com/embed/iSSKDIcpdSE" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                    class="video">
+                </iframe>
+                <div id="overlaySelfish" class="d-none" onclick="hideSelfish()"></div>
+            </div>
+
+            <!-- Backseat -->
+            <div id="backseatOverlay" class="d-none">
+                <iframe width="760" height="415" src="https://www.youtube.com/embed/ThCbl10-1pA" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                    class="video">
+                </iframe>
+                <div id="overlayBackseat" class="d-none" onclick="hideBackseat()"></div>
+            </div>
+
+            <!-- Gratitude -->
+            <div id="gratitudeOverlay" class="d-none">
+                <iframe width="760" height="415" src="https://www.youtube.com/embed/QL6hrZLaetI" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                    class="video">
+                </iframe>
+                <div id="overlayGratitude" class="d-none" onclick="hideGratitude()"></div>
+            </div>
+
+            <!-- Coachella 2019 -->
+            <div id="coachellaOverlay" class="d-none">
+                <iframe width="760" height="415" src="https://www.youtube.com/embed/qp3_29BlZ0M" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                    class="video">
+                </iframe>
+                <div id="overlayCoachella" class="d-none" onclick="hideCoachella()"></div>
+            </div>
+
+            <!-- Great Espace Festival-->
+            <div id="greatOverlay" class="d-none">
+                <iframe width="760" height="415" src="https://www.youtube.com/embed/BGZR7ufpUFg" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                    class="video">
+                </iframe>
+                <div id="overlayGreat" class="d-none" onclick="hideGreat()"></div>
+            </div>
+
+            <!-- Sonar-->
+            <div id="sonarOverlay" class="d-none">
+                <iframe width="760" height="415" src="https://www.youtube.com/embed/pNPI6GRmCow" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                    class="video">
+                </iframe>
+                <div id="overlaySonar" class="d-none" onclick="hideSonar()"></div>
+            </div>
+
+            <!-- Demon Dayz Festival -->
+            <div id="demonOverlay" class="d-none">
+                <iframe width="760" height="415" src="https://www.youtube.com/embed/-i2S_yq3o-I" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                    class="video">
+                </iframe>
+                <div id="overlayDemon" class="d-none" onclick="hideDemon()"></div>
+            </div>
+
+            <!-- Listen Out Melbourne -->
+            <div id="listenOverlay" class="d-none">
+                <iframe width="760" height="415" src="https://www.youtube.com/embed/WnRnfVFxIJw" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+                    class="video">
+                </iframe>
+                <div id="overlayListen" class="d-none" onclick="hideListen()"></div>
+            </div>
         </section>
     </div>
 
     <nav class="menu">
         <h1>LITTLE SIMZ</h1>
+        <div class="pictos">
+            <a target="_blank" href="https://www.youtube.com/channel/UC89IYKXyf15qNezA7IuFG1A"><img
+                    src="assets/pictos/youtube.png" alt="" onmouseover="this.src='assets/pictos/youtube_hover.png'"
+                    onmouseout="this.src='assets/pictos/youtube.png'"></a>
+
+            <a target="_blank" href="https://www.facebook.com/LittleSimz/"><img src="assets/pictos/facebook.png" alt=""
+                    onmouseover="this.src='assets/pictos/facebook_hover.png'"
+                    onmouseout="this.src='assets/pictos/facebook.png'"></a>
+
+            <a target="_blank" href="https://www.instagram.com/littlesimz/"><img src="assets/pictos/instagram.png" alt=""
+                    onmouseover="this.src='assets/pictos/instagram_hover.png'"
+                    onmouseout="this.src='assets/pictos/instagram.png'"></a>
+
+            <a target="_blank" href="https://twitter.com/littlesimz"><img src="assets/pictos/twitter.png" alt=""
+                    onmouseover="this.src='assets/pictos/twitter_hover.png'"
+                    onmouseout="this.src='assets/pictos/twitter.png'"></a>
+        </div>
         <div class="tmp">
-            <a href="">HOME</a>
-            <a href="">LITTLE SIMZ</a>
-            <a href="">MUSIC</a>
-            <a href="">TOUR</a>
-            <a href="">PHOTOS</a>
-            <a href="">VIDEOS</a>
+            <a href="#0" class="menu-link">HOME</a>
+            <a href="#1" class="menu-link">LITTLE SIMZ</a>
+            <a href="#2" class="menu-link">MUSIC</a>
+            <a href="#3" class="menu-link">TOUR</a>
+            <a href="#4" class="menu-link">PHOTOS</a>
+            <a href="#5" class="menu-link">VIDÉOS</a>
         </div>
     </nav>
     <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src='Lib/jquery.fullpage.min.js'></script>
-    <script>
-        $('#fullpage').fullpage();
-    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase-firestore.js"></script>
+
+    <script src="scripts/script.js"></script>
+    <script src="scripts/displayTour.js"></script>
+
 </body>
 
 </html>

@@ -49,12 +49,24 @@ table {
 	border-spacing: 0;
 }
 
+
+@font-face {
+	font-family: "AbolitionW00-Soft";
+  
+	src: url("../fonts/AbolitionW00Soft.woff") format("woff"), /* Modern Browsers */
+	  url("../fonts/AbolitionW00Soft.woff2") format("woff2"); /* Modern Browsers */
+	font-weight: normal;
+	font-style: normal;
+}
+
+#page1,#page2,#page3,#page4,#page5,#page6 {
+	position: relative;
+}
+
+
 .menu {
 	display: flex;
 	/* flex-direction: column; */
-}
-
-nav {
 	color: white;
 	position: fixed;
 	top: 1rem;
@@ -63,13 +75,22 @@ nav {
 	font-size: 3rem;
 }
 
-nav a {
+.menu-link {
 	text-decoration: none;
 	color: white;
 	margin: 0 4rem;
+	opacity: 0.35;
 }
-nav a:hover {
-	color: #ff5300;
+
+.menu-link:hover {
+	opacity: 1;
+	color: white;
+}
+
+.active {
+	opacity: 1;
+	color: #de0000;
+	text-decoration: none;
 }
 
 .tmp {
@@ -79,20 +100,23 @@ nav a:hover {
 	font-size: 2rem;
 }
 
-
-#fullpage {
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
+.pictos {
+	position: fixed;
+	right: 200px;
+	top: 8px
 }
 
-#fullpage section {
-    height: 100vh;
-    width: 100vw;
+.pictos img {
+	width: 30px;
 }
+
+
+/******************/
+/***** PAGE 1 *****/
+/******************/
 
 #page1 {
-	background-image: url('../Little-Simz-Grey-Area.jpg');
+	background-image: url('../assets/img/Little-Simz-Grey-Area.jpg');
 	background-repeat: no-repeat;
 	background-position-y: 39%;
 	background-size: cover;
@@ -100,28 +124,44 @@ nav a:hover {
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	justify-content: center;
 }
 
 #page1 p {
-	padding: 3rem 0; 
-	font-size: 2rem;
+	font-size: 2.5rem;
 	color: #b4b4b4;
+	font-family: 'AbolitionW00-Soft', sans-serif;
+}
+
+#new_album {
+	padding-top: 15rem; 
 }
 
 #page1 h1 {
-	font-size: 4rem
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
+	font-size: 7rem;
+	font-family: 'AbolitionW00-Soft', sans-serif;
 }
 
 .button {
-	background-color: red;
+	background-color: #de0000;
 	border: none;
 	padding: 15px 32px;
 	border-radius: 10px;
 	color: white;
 	font-size: 1.5rem;
 	cursor: pointer;
+	margin-top: 3rem;
+	font-family: 'AbolitionW00-Soft', sans-serif;
+	font-size: 1.25rem;
+	letter-spacing: 0.25rem;
 }
+
+.button:hover {
+	font-size: 1.5rem;
+	color: black;
+}
+
 
 
 #home {
@@ -136,12 +176,28 @@ nav a:hover {
 	font-family: 'Anton', sans-serif;
 }
 
+
+/******************/
+/***** PAGE 2 *****/
+/******************/
+
 #page2 {
-	background-image: url(../little-simz-fear-of-helping-yourself.jpg);
+	background-image: url(../assets/img/little-simz-fear-of-helping-yourself.jpg);
 	background-repeat: no-repeat;
 	background-size: 80vw 100vh;
-	background-position-x: -450px;
+	background-position-x: -440px;
 	background-color: #01417c;
+	font-family: 'AbolitionW00-Soft', sans-serif;	
+}
+
+#page2 h1 {
+	font-size: 2rem;
+	letter-spacing: 1rem;
+}
+
+#page2 p {
+	line-height: 2rem;
+	letter-spacing: 0.2rem;
 }
 
 #little_simz {
@@ -149,80 +205,15 @@ nav a:hover {
 	opacity: 0.35;
 	transform: rotate(-90deg);
 	position: absolute;
-	top: 17rem;
+	top: 21rem;
 	font-size: 7rem;
-	left: -10.5rem;
-	font-family: 'Anton', sans-serif;
-}
-
-#page3 {
-	background-color: black;
-}
-
-#page3 p {
-	color: white;
-	opacity: .35;
-	transform: rotate(-90deg);
-	position: absolute;
-	top: 17rem;
-	font-size: 7rem;
-	letter-spacing: 3rem;
 	left: -11.5rem;
 	font-family: 'Anton', sans-serif;
 }
 
-#page4 {
-	background-color: #ff5300;
-}
-
-#page4 p {
-	color: white;
-	opacity: .35;
-	transform: rotate(-90deg);
-	position: absolute;
-	top: 17rem;
-	font-size: 7rem;
-	letter-spacing: 3rem;
-	left: -8rem;
-	font-family: 'Anton', sans-serif;
-}
-
-#page5 {
-	background-color: black;
-}
-
-#page5 p {
-	color: white;
-	opacity: .35;
-	transform: rotate(-90deg);
-	position: absolute;
-	top: 16rem;
-	font-size: 7rem;
-	letter-spacing: 3rem;
-	left: -14.5rem;
-	font-family: 'Anton', sans-serif;
-}
-
-#page6 {
-	background-color: #de0000;
-}
-
-#page6 p{
-	color: white;
-	opacity: .35;
-	transform: rotate(-90deg);
-	position: absolute;
-	top: 16rem;
-	font-size: 7rem;
-	letter-spacing: 3rem;
-	left: -13rem;
-	font-family: 'Anton', sans-serif;
-}
-
-
 #bio {
 	display: flex;
-	justify-content: flex-end
+	justify-content: flex-end;
 }
 
 #bio-text {
@@ -236,7 +227,7 @@ nav a:hover {
 	font-size: 1.5rem;
 	height: 65vh;
 	overflow: auto;
-	margin-top: 10rem;
+	margin-top: 12rem;
 }
 
 #bio-text p {
@@ -244,3 +235,817 @@ nav a:hover {
 	text-align: justify;
 }
 
+/******************/
+/***** PAGE 3 *****/
+/******************/
+
+#tracklist-containers {
+	background-color: black;
+	font-family: 'AbolitionW00-Soft';	
+	position: relative;
+}
+#tracklist-containers h1 {
+	font-size: 2.20rem;
+	letter-spacing: 1rem;
+}
+
+#tracklist-containers p {
+	line-height: 2rem;
+}
+
+.play-btn {
+	font-size: 15px;
+	color: white;
+	margin-left: 10px;
+}
+
+.audio-player {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+
+/*****************/
+/***** 101FM *****/
+/*****************/
+
+.audio-player:nth-of-type(6){
+	position: absolute;
+	top: 110px;
+	right: -90px
+}
+#tracklist-containers p:nth-of-type(6) {
+	position: absolute;
+	top: 80px;
+	right: 39px;
+}
+/********************/
+/***** PRESSURE *****/
+/********************/
+
+.audio-player:nth-of-type(7) {
+	position: absolute;
+	top: 170px;
+	right: -90px;
+}
+#tracklist-containers p:nth-of-type(7) {
+	position: absolute;
+	top: 140px;
+	right: 4px;
+}
+
+/*******************/
+/***** THERAPY *****/
+/*******************/
+
+.audio-player:nth-of-type(8) {
+	position: absolute;
+	top: 230px;
+	right: -90px;
+}
+
+#tracklist-containers p:nth-of-type(8) {
+	position: absolute;
+	top: 200px;
+	right: 12px;
+}
+
+/**************************/
+/***** SHERBET SUNSET *****/
+/**************************/
+
+.audio-player:nth-of-type(9) {
+	position: absolute;
+	top: 292px;
+	right: -90px;
+}
+
+#tracklist-containers p:nth-of-type(9) {
+	position: absolute;
+	top: 258px;
+	right: -60px;
+}
+
+/*******************/
+/***** FLOWERS *****/
+/*******************/
+
+.audio-player:nth-of-type(10) {
+	position: absolute;
+	top: 352.25px;
+	right: -90px
+}
+
+#tracklist-containers p:nth-of-type(10) {
+	position: absolute;
+	top: 320px;
+	right: 8px;
+}
+
+progress, progress::-webkit-progress-value { 
+	background: red; 
+	height: 7px;
+}
+
+progress::-webkit-progress-bar {
+	background: white;
+}
+
+progress {
+	margin: 10px;
+}
+
+#music {
+	color: white;
+	opacity: .35;
+	transform: rotate(-90deg);
+	position: absolute;
+	top: 49vh;
+	font-size: 7rem;
+	letter-spacing: 3rem;
+	left: -11.5rem;
+	font-family: 'Anton', sans-serif;
+}
+
+.button2 {
+	background-color: #de0000;
+	border: none;
+	padding: 15px 32px;
+	border-radius: 10px;
+	color: white;
+	font-size: 1.5rem;
+	cursor: pointer;
+	margin-top: 2.25rem;
+	font-family: 'AbolitionW00-Soft', sans-serif;
+	font-size: 1.25rem;
+	letter-spacing: 0.25rem;
+}
+
+.button2:hover {
+	font-size: 1.5rem;
+	color: black;
+}
+
+#bio-2 {
+	display: flex;
+}
+
+#bio-album {
+	color: white;
+	display: flex;
+	flex-direction: column;
+	font-size: 1.5rem;
+	height: 100vh;
+	overflow: hidden;
+	margin-top: 10.5rem;
+	margin-left: 11.5rem;
+	text-align: justify;
+	align-items: center;
+	width: 39vw;
+	letter-spacing: 0.2rem;
+}
+
+#bio-album p {
+	margin-top: 0.5rem;
+}
+
+#tracklist {
+	position: absolute;
+	right: 13rem;
+	top: 10.25rem;
+	width: 400px;
+	height: 90%;
+	color: white;
+}
+
+#other-albums {
+	color: white;
+	position: absolute;
+	bottom: 50px;
+	right: 215px
+}
+
+#other-albums p {
+	position: absolute;
+	right: -20px;
+	bottom: 65px;
+	width: 300px
+}
+
+#spotify {
+	position: absolute;
+	right: 130px;
+	bottom: -15px
+}
+
+#spotify a img{
+	width: 50px;
+}
+
+#spotify a img:hover {
+	width: 60px;
+	position: absolute;
+	right: -5px;
+	bottom: 2px
+}
+
+#tracklist p, #other-albums {
+	font-family: 'AbolitionW00-Soft', sans-serif;
+	font-size: 1.5rem;
+	letter-spacing: 0.2rem;
+}
+
+#tracklist h1 {
+	padding-bottom: 2.25rem;
+	padding-left: 7rem;
+}
+
+
+.paragraphe1 {
+	padding-bottom: 1rem;
+	padding-top: 1rem;
+}
+
+/******************/
+/***** PAGE 4 *****/
+/******************/
+
+#page4 {
+	background-color: #ff5300;
+	background-image: url(../assets/img/Tour.jpg);
+	background-repeat: no-repeat;
+	background-position-x: 51.25vw
+}
+
+#Tour {
+	color: white;
+	opacity: .35;
+	transform: rotate(-90deg);
+	position: absolute;
+	top: 17rem;
+	font-size: 7rem;
+	letter-spacing: 3rem;
+	left: -8rem;
+	font-family: 'Anton', sans-serif;
+}
+
+#tour-ctnr {
+	display: flex;
+	margin-left: 9rem;
+}
+
+#tour-ctnr-2 {
+	display: flex;
+	overflow: auto;
+	margin-top: 11rem;
+	width: 41.75vw;
+}
+
+#tour {
+	display: flex;
+	width: 40vw;
+	height: 100vh;
+	flex-direction: column;
+	color: white;
+	height: 65vh;
+	font-family: 'AbolitionW00-Soft', sans-serif;
+	line-height: 2rem;
+	letter-spacing: 0.2rem;
+	text-align: left;
+}
+
+#tour p {
+	padding-top: 0.25rem;
+	padding-bottom: 0.225rem;
+}
+#tour-middle {
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	flex-direction: column;
+	color: white;
+	height: 65vh;
+	font-family: 'AbolitionW00-Soft', sans-serif;
+	line-height: 2rem;
+	letter-spacing: 0.2rem;
+	text-align: left;
+}
+
+#tour-middle p {
+	padding-top: 0.25rem;
+	padding-bottom: 0.225rem;
+}
+
+#tour, #tour-middle, #tour-right{
+	margin-top: 5px
+}
+
+#tour-right {
+	display: flex;
+	width: 150vw;
+	height: 100vh;
+	flex-direction: column;
+	color: white;
+	height: 65vh;
+	font-family: 'AbolitionW00-Soft', sans-serif;
+	line-height: 2rem;
+	letter-spacing: 0.2rem;
+	text-align: right;
+	margin-right: 0.5rem
+}
+#tour-ctnr p {
+	font-size: 1rem;
+	margin-top: 1rem
+}
+
+#tour-ctnr button {
+	background-color: white;
+	border: none;
+	padding: 20px 20px;
+	border-radius: 10px;
+	color: black;
+	font-size: 1.25rem;
+	cursor: pointer;
+	font-family: 'AbolitionW00-Soft', sans-serif;
+	letter-spacing: 0.25rem;
+	position: absolute;
+	bottom: 30px;
+	left: 25rem;
+}
+
+#tour-ctnr button:hover {
+	background-color: black;
+	color: white;
+}
+
+.black {
+	color: black;
+}
+
+/******************/
+/***** PAGE 5 *****/
+/******************/
+
+#page5 {
+	background-color: black;
+}
+
+#photo {
+	color: white;
+	opacity: .35;
+	transform: rotate(-90deg);
+	position: absolute;
+	top: 16rem;
+	font-size: 7rem;
+	letter-spacing: 3rem;
+	left: -14.5rem;
+	font-family: 'Anton', sans-serif;
+}
+
+.img-global-ctnr {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.img-ctnr {
+	width: 170px;
+	height: 170px;
+	position: relative;
+	margin-top: 5rem;
+	margin-left: 7rem
+}
+
+.img-ctnr:nth-of-type(1), .img-ctnr:nth-of-type(2),
+.img-ctnr:nth-of-type(3), .img-ctnr:nth-of-type(4),
+.img-ctnr:nth-of-type(5) {
+	margin-top: 12rem;
+}
+
+
+.img-ctnr img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+
+#global-overlay {
+	background: grey;
+	opacity: 0.5;
+	position: absolute;
+	width: 100%;
+	height: 3000px;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 2;
+}
+
+/******************/
+/***** PAGE 6 *****/
+/******************/
+
+#page6 {
+	background-color: #de0000;
+	position: relative;
+}
+
+#videos{
+	color: white;
+	opacity: .35;
+	transform: rotate(-90deg);
+	position: absolute;
+	top: 17rem;
+	font-size: 7rem;
+	letter-spacing: 3rem;
+	left: -13rem;
+	font-family: 'Anton', sans-serif;
+	z-index: 2;
+}
+
+.rounded-image-2, .rounded-image-3, .rounded-image-4, .rounded-image-5,
+.rounded-image-6, .rounded-image-7, .rounded-image-8, .rounded-image-9,
+.rounded-image-10, .rounded-image-11 {
+	cursor: pointer;
+}
+
+.rounded-image{
+	background-image: url(/assets/img/little-simz-full-or-empty-video-still.png);
+	background-size: 400px 400px;
+	background-position-y: 0px;
+	background-position-x: 0px;
+	background-repeat: no-repeat;
+	overflow:hidden;
+	-webkit-border-radius:50px;
+	-moz-border-radius:50px;
+	border-radius:250px;
+	width:400px;
+	height:400px;
+	position: absolute;
+	top: 34vh;
+	left: 38vw;
+	border: 10px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.rounded-image a {
+	margin-bottom: 1rem;
+}
+.rounded-image img {
+	width: 70px;
+}
+.rounded-image-2{
+	background-image: url(/assets/img/offence.png);
+	background-size: 100px 100px;
+	background-position-y: -10px;
+	background-position-x: -10px;
+	background-repeat: no-repeat;
+	overflow:hidden;
+	-webkit-border-radius:50px;
+	-moz-border-radius:50px;
+	border-radius:250px;
+	width:100px;
+	height:100px;
+	border: 5px solid black;
+	position: absolute;
+	left: 30.5vw;
+	bottom: 31.5vh;
+}
+.rounded-image-3{
+	background-image: url(/assets/img/Little-Simz-Grey-Area.jpg);
+	background-size: 100px 100px;
+	background-position-y: -10px;
+	background-position-x: -10px;
+	background-repeat: no-repeat;
+	overflow:hidden;
+	-webkit-border-radius:50px;
+	-moz-border-radius:50px;
+	border-radius:250px;
+	width:100px;
+	height:100px;
+	border: 5px solid black;
+	position: absolute;
+	left: 32vw;
+	top: 40vh;
+}
+
+.rounded-image-4 {
+	background-image: url(/assets/img/LittleSimzFestival-1696.jpg);
+	background-size: 100px 120px;
+	background-position-y: -10px;
+	background-position-x: -7px;
+	background-repeat: no-repeat;
+	overflow:hidden;
+	-webkit-border-radius:50px;
+	-moz-border-radius:50px;
+	border-radius:250px;
+	width:100px;
+	height:100px;
+	border: 5px solid black;
+	position: absolute;
+	left: 36vw;
+	top: 26.5vh;
+}
+
+.rounded-image-5 {
+	background-image: url(/assets/img/Backseat.jpg);
+	background-size: 100px 100px;
+	background-position-y: 0px;
+	background-position-x: -10px;
+	background-repeat: no-repeat;
+	overflow:hidden;
+	-webkit-border-radius:50px;
+	-moz-border-radius:50px;
+	border-radius:250px;
+	width:100px;
+	height:100px;
+	border: 5px solid black;
+	position: absolute;
+	left: 32vw;
+	bottom: 17vh;
+}
+
+.rounded-image-6 {
+	background-image: url(/assets/img/gratitude.jpg);
+	background-size: 100px 100px;
+	background-position-y: 0px;
+	background-position-x: -10px;
+	background-repeat: no-repeat;
+	overflow:hidden;
+	-webkit-border-radius:50px;
+	-moz-border-radius:50px;
+	border-radius:250px;
+	width:100px;
+	height:100px;
+	border: 5px solid black;
+	position: absolute;
+	left: 36vw;
+	bottom: 4vh;
+}
+
+.rounded-image-7 {
+	background-image: url(/assets/img/Sonar.jpg);
+	background-size: 100px 100px;
+	background-position-y: 0px;
+	background-position-x: 0px;
+	background-repeat: no-repeat;
+	overflow:hidden;
+	-webkit-border-radius:50px;
+	-moz-border-radius:50px;
+	border-radius:250px;
+	width:100px;
+	height:100px;
+	border: 5px solid black;
+	position: absolute;
+	right: 28.5vw;
+	bottom: 31.5vh;
+}
+
+.rounded-image-8 {
+	background-image: url(/assets/img/little-simz-demon-dayz.jpg);
+	background-size: 190px 190px;
+	background-position-y: -35px;
+	background-position-x: -40px;
+	background-repeat: no-repeat;
+	overflow:hidden;
+	-webkit-border-radius:50px;
+	-moz-border-radius:50px;
+	border-radius:250px;
+	width:100px;
+	height:100px;
+	border: 5px solid black;
+	position: absolute;
+	right: 30vw;
+	top: 40vh;
+}
+
+.rounded-image-9 {
+	background-image: url(/assets/img/coachella.jpg);
+	background-size: 100px 100px;
+	background-position-y: -10px;
+	background-position-x: -7px;
+	background-repeat: no-repeat;
+	overflow:hidden;
+	-webkit-border-radius:50px;
+	-moz-border-radius:50px;
+	border-radius:250px;
+	width:100px;
+	height:100px;
+	border: 5px solid black;
+	position: absolute;
+	right: 34vw;
+	top: 26.5vh;
+}
+
+.rounded-image-10 {
+	background-image: url(/assets/img/DemonDaysFestival.jpg);
+	background-size: 100px 100px;
+	background-position-y: 0px;
+	background-position-x: 0px;
+	background-repeat: no-repeat;
+	overflow:hidden;
+	-webkit-border-radius:50px;
+	-moz-border-radius:50px;
+	border-radius:250px;
+	width:100px;
+	height:100px;
+	border: 5px solid black;
+	position: absolute;
+	right: 30vw;
+	bottom: 17vh;
+}
+
+.rounded-image-11 {
+	background-image: url(/assets/img/ListenOutMelbourne.jpg);
+	background-size: 100px 100px;
+	background-position-y: -10px;
+	background-position-x: -7px;
+	background-repeat: no-repeat;
+	overflow:hidden;
+	-webkit-border-radius:50px;
+	-moz-border-radius:50px;
+	border-radius:250px;
+	width:100px;
+	height:100px;
+	border: 5px solid black;
+	position: absolute;
+	right: 34vw;
+	bottom: 4vh;
+}
+#clips, #concerts {
+	position: absolute;
+	font-size: 2.5rem;
+	font-family: 'AbolitionW00-Soft', sans-serif;
+	color: white;
+}
+
+#clips {
+	top: 19vh;
+	left: 39vw;
+}
+
+#concerts {
+	top: 19vh;
+	right: 35vw;
+}
+
+.selfish, .boss, .offense,
+.backseat, .gratitude, .coachella,
+.great, .sonar, .demon, .listen {
+	color: white;
+	font-family: 'AbolitionW00-Soft', sans-serif;
+	opacity: .5;
+	position: absolute;
+	font-size: 2rem;
+}
+
+.selfish {
+	top: 30vh;
+	left: 30.5vw
+}
+
+.boss {
+	top: 44vh;
+	left: 28vw;
+}
+
+.offense {
+	bottom: 35.5vh;
+	left: 25vw
+}
+
+.backseat {
+	bottom: 20vh;
+	left: 26vw;
+}
+
+.gratitude {
+	bottom: 7vh;
+	left: 29.5vw;
+}
+
+.coachella {
+	top: 30vh;
+	right: 24vw;
+}
+
+.great {
+	top: 44vh;
+	right: 16.5vw
+}
+
+.sonar {
+	bottom: 35.5vh;
+	right: 24vw
+}
+
+.demon {
+	bottom: 20.5vh;
+	right: 17.25vw;
+}
+
+.listen {
+	bottom: 7.5vh;
+	right: 20.5vw
+}
+
+#overlayBoss, #overlaySelfish, #overlayOffense,
+#overlayBackseat, #overlayGratitude, #overlayCoachella,
+#overlayGreat, #overlaySonar, #overlayDemon,
+#overlayListen{
+	background: grey;
+	opacity: 0.5;
+	position: absolute;
+	width: 100%;
+	height: 3000px;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.video-ctnr {
+	opacity: 1;;
+}
+.video {
+	z-index: 99;
+	position: absolute;
+	top: 25vh;
+	left: 25vw;
+	opacity: 1;
+}
+
+.d-none {
+	display: none;
+}
+footer {
+	background-color: black;
+	position: absolute;
+	bottom: 0px;
+	width: -webkit-fill-available;
+	color: white;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: bold;
+	font-size: .75rem;
+}
+
+.footer-links a {
+	text-decoration: none;
+	color: white;
+	margin-right: 5rem;
+}
+
+.footer-links, .legal-m, .copyright , footer h1{
+	margin-bottom: .75rem;
+}
+
+.logos a {
+	margin-right: .5rem;
+}
+
+.logos {
+	margin-top: .75rem;
+	margin-bottom: .75rem;
+}
+
+footer h1{
+	color: #de0000;
+	letter-spacing: 0.2rem;
+}
+
+footer img {
+	width: 30px;
+}
+/*********************/
+/***** Scrollbar *****/
+/*********************/
+
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+	border-radius: 50px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	display: none;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: #555; 
+  }
+
+	
