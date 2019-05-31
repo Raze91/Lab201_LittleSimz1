@@ -567,10 +567,7 @@ progress {
 	text-align: left;
 }
 
-#tour p {
-	padding-top: 0.25rem;
-	padding-bottom: 0.225rem;
-}
+
 #tour-middle {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -589,10 +586,6 @@ progress {
 	text-align: left;
 }
 
-#tour-middle p {
-	padding-top: 0.25rem;
-	padding-bottom: 0.225rem;
-}
 
 #tour, #tour-middle, #tour-right{
 	margin-top: 5px
@@ -624,7 +617,7 @@ progress {
 #tour-ctnr button {
 	background-color: white;
 	border: none;
-	padding: 20px 20px;
+	padding: 10px 20px;
 	border-radius: 10px;
 	color: black;
 	font-size: 1.25rem;
@@ -632,7 +625,7 @@ progress {
 	font-family: 'AbolitionW00-Soft', sans-serif;
 	letter-spacing: 0.25rem;
 	position: absolute;
-	bottom: 30px;
+	bottom: 20px;
 	left: 25rem;
 }
 
